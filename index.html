@@ -1,0 +1,1562 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carnitas Los Michoacanos | El Auténtico Sabor Michoacano</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #E6572F;       /* Naranja vibrante para apetito y dinamismo */
+            --primary-light: #FFEDE8; /* Fondo naranja muy claro para contrastes cálidos */
+            --secondary: #260A7B;     /* Azul/Morado profundo del logotipo */
+            --bg-light: #FFFDF9;      /* Fondo crema suave, cálido y familiar */
+            --text-dark: #2B2523;     /* Texto principal oscuro pero suave */
+            --text-muted: #6B6562;    /* Texto secundario */
+            --white: #FFFFFF;
+            --shadow-sm: 0 4px 6px rgba(230, 87, 47, 0.05);
+            --shadow-md: 0 10px 20px rgba(230, 87, 47, 0.08);
+            --shadow-lg: 0 15px 30px rgba(38, 10, 123, 0.12);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* Utility Classes */
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 14px 28px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-primary {
+            background-color: var(--primary);
+            color: var(--white);
+            box-shadow: 0 6px 15px rgba(230, 87, 47, 0.35);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(230, 87, 47, 0.5);
+            background-color: #cc451f;
+        }
+
+        .btn-secondary {
+            background-color: var(--secondary);
+            color: var(--white);
+            box-shadow: 0 6px 15px rgba(38, 10, 123, 0.2);
+        }
+
+        .btn-secondary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(38, 10, 123, 0.3);
+            background-color: #1c055c;
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary);
+            color: var(--white);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(230, 87, 47, 0.2);
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            color: var(--secondary);
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        .section-title span {
+            color: var(--primary);
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 5px;
+            background-color: var(--primary);
+            margin: 12px auto 0;
+            border-radius: 3px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 1.15rem;
+            margin-bottom: 50px;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: rgba(255, 253, 249, 0.96);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: var(--shadow-sm);
+            backdrop-filter: blur(10px);
+            border-bottom: 3px solid var(--primary);
+            transition: var(--transition);
+        }
+
+        header.scrolled {
+            padding: 2px 0;
+            background-color: var(--white);
+            box-shadow: var(--shadow-md);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 8px 24px;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+
+        .logo-img {
+            height: 75px;
+            width: auto;
+            transition: var(--transition);
+        }
+
+        header.scrolled .logo-img {
+            height: 60px;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--secondary);
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: var(--transition);
+            position: relative;
+            padding: 8px 12px;
+            border-radius: 8px;
+        }
+
+        .nav-link:hover {
+            color: var(--primary);
+            background-color: var(--primary-light);
+        }
+
+        .nav-link.active {
+            color: var(--white);
+            background-color: var(--primary);
+        }
+
+        .menu-toggle {
+            display: none;
+            font-size: 1.6rem;
+            color: var(--primary);
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 200px 0 120px;
+            background: linear-gradient(135deg, rgba(255,253,249,1) 0%, #FFF0EB 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            right: -5%;
+            top: -5%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(230,87,47,0.12) 0%, rgba(255,255,255,0) 70%);
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            align-items: center;
+            gap: 40px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: var(--primary);
+            color: var(--white);
+            padding: 8px 18px;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 10px rgba(230, 87, 47, 0.25);
+        }
+
+        .hero-title {
+            font-size: 3.8rem;
+            color: var(--secondary);
+            font-weight: 800;
+            line-height: 1.15;
+            margin-bottom: 20px;
+        }
+
+        .hero-title span {
+            color: var(--primary);
+        }
+
+        .hero-description {
+            font-size: 1.2rem;
+            color: var(--text-dark);
+            margin-bottom: 40px;
+            max-width: 550px;
+        }
+
+        .hero-ctas {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .hero-image-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-img-placeholder {
+            width: 100%;
+            max-width: 400px;
+            height: 350px;
+            border: 3px dashed var(--primary);
+            border-radius: 24px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(230, 87, 47, 0.03);
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .hero-img-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-12px); }
+            100% { transform: translateY(0px); }
+        }
+
+        /* Menu & Specialties with Dynamic Sequential Video Background */
+        .specialties-video-bg {
+            position: relative;
+            padding: 100px 0;
+            overflow: hidden;
+            background-color: #0b0224;
+        }
+
+        .bg-video-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        .bg-video-container video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .bg-video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(38, 10, 123, 0.88) 0%, rgba(11, 2, 36, 0.94) 100%);
+            z-index: 2;
+        }
+
+        .specialties-content {
+            position: relative;
+            z-index: 3;
+            color: var(--white);
+        }
+
+        .specialties-content .section-title {
+            color: var(--white);
+        }
+        
+        .specialties-content .section-subtitle {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .video-status-indicator {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background-color: rgba(236, 87, 47, 0.2);
+            border: 1px solid var(--primary);
+            padding: 6px 16px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            color: #FF8360;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+        
+        .video-status-indicator i {
+            animation: spin 4s linear infinite;
+        }
+        @keyframes spin { 100% { transform: rotate(360deg); } }
+
+        /* Menu Grid Layout */
+        .menu-sections-container {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            margin-top: 20px;
+        }
+
+        /* BEST SELLER COMBO CARD */
+        .best-seller-card {
+            background: linear-gradient(135deg, #E6572F 0%, #FF744A 100%);
+            border-radius: 24px;
+            padding: 40px;
+            box-shadow: 0 15px 35px rgba(230, 87, 47, 0.3);
+            color: var(--white);
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            align-items: center;
+            gap: 30px;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .best-seller-card::before {
+            content: 'BEST SELLER';
+            position: absolute;
+            right: -35px;
+            top: 25px;
+            background-color: #260A7B;
+            color: var(--white);
+            font-size: 0.75rem;
+            font-weight: 800;
+            padding: 6px 40px;
+            transform: rotate(45deg);
+            letter-spacing: 1px;
+        }
+
+        .combo-image-frame {
+            width: 140px;
+            height: 140px;
+            border: 3px dashed rgba(255, 255, 255, 0.6);
+            border-radius: 16px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(255, 255, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .combo-image-frame img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .combo-info h3 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .combo-info p {
+            font-size: 1.15rem;
+            opacity: 0.95;
+            max-width: 600px;
+        }
+
+        .combo-price-box {
+            background-color: var(--white);
+            color: var(--primary);
+            padding: 20px 35px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .combo-price-box .price-label {
+            font-size: 0.85rem;
+            font-weight: 700;
+            color: var(--secondary);
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: -5px;
+        }
+
+        .combo-price-box .price-value {
+            font-size: 3rem;
+            font-weight: 800;
+            line-height: 1;
+        }
+
+        .menu-categories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 25px;
+        }
+
+        .menu-category-box {
+            background-color: rgba(255, 255, 255, 0.06);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            padding: 25px;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .menu-category-box:hover {
+            border-color: var(--primary);
+            background-color: rgba(255, 255, 255, 0.09);
+            transform: translateY(-5px);
+        }
+
+        .category-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid rgba(230, 87, 47, 0.3);
+            padding-bottom: 12px;
+        }
+
+        .category-header i {
+            font-size: 1.4rem;
+            color: var(--primary);
+            background-color: rgba(230, 87, 47, 0.15);
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+        }
+
+        .category-header h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--white);
+        }
+
+        .menu-items-list {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+            list-style: none;
+            flex-grow: 1;
+            margin-bottom: 25px;
+        }
+
+        .menu-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .menu-item-main {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 8px;
+        }
+
+        .menu-item-title {
+            font-weight: 600;
+            font-size: 1.05rem;
+            color: var(--white);
+        }
+
+        .menu-item-dots {
+            flex-grow: 1;
+            border-bottom: 1px dashed rgba(255, 255, 255, 0.2);
+            position: relative;
+            top: -4px;
+        }
+
+        .menu-item-price {
+            font-weight: 700;
+            color: #FF8360;
+            font-size: 1.05rem;
+        }
+
+        .menu-item-desc {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.65);
+            margin-top: 4px;
+        }
+
+        .menu-category-slider {
+            width: 100%;
+            height: 140px;
+            border: 2px dashed rgba(255, 255, 255, 0.4);
+            border-radius: 16px;
+            overflow: hidden;
+            position: relative;
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+
+        .slider-track {
+            display: flex;
+            width: 300%;
+            height: 100%;
+            animation: cycleSlides 12s infinite ease-in-out;
+        }
+
+        .slider-slide {
+            width: 33.333%;
+            height: 100%;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.75rem;
+            padding: 10px;
+        }
+
+        .slider-slide i {
+            font-size: 1.8rem;
+            color: var(--primary);
+            opacity: 0.6;
+            margin-bottom: 6px;
+        }
+
+        .slider-slide span {
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .slider-slide img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 2;
+        }
+
+        @keyframes cycleSlides {
+            0%, 28% { transform: translateX(0); }
+            33%, 61% { transform: translateX(-33.333%); }
+            66%, 94% { transform: translateX(-66.666%); }
+            100% { transform: translateX(0); }
+        }
+
+        /* Delivery Apps Section */
+        .delivery {
+            padding: 100px 0;
+            background-color: var(--white);
+        }
+
+        .apps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .app-card {
+            background: var(--bg-light);
+            border-radius: 20px;
+            padding: 35px 25px;
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid transparent;
+        }
+
+        .app-card i {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        .app-card h4 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 15px;
+        }
+
+        .app-rappi { border-bottom: 4px solid #FFA17A; }
+        .app-rappi i { color: #FF441F; }
+        .app-rappi:hover {
+            border-color: #FF441F;
+            box-shadow: 0 12px 25px rgba(255, 68, 31, 0.15);
+            transform: translateY(-5px);
+        }
+
+        .app-didi { border-bottom: 4px solid #FFC299; }
+        .app-didi i { color: #FF6600; }
+        .app-didi:hover {
+            border-color: #FF6600;
+            box-shadow: 0 12px 25px rgba(255, 102, 0, 0.15);
+            transform: translateY(-5px);
+        }
+
+        .app-uber { border-bottom: 4px solid #A6A6A6; }
+        .app-uber i { color: #000000; }
+        .app-uber:hover {
+            border-color: #000000;
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+            transform: translateY(-5px);
+        }
+
+        .app-btn {
+            margin-top: 10px;
+            padding: 8px 20px;
+            background-color: var(--white);
+            color: var(--text-dark);
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: var(--transition);
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+
+        .app-card:hover .app-btn {
+            background-color: var(--primary);
+            color: var(--white);
+            border-color: var(--primary);
+        }
+
+        /* Locations Section */
+        .locations {
+            padding: 100px 0;
+            background-color: var(--bg-light);
+        }
+
+        .locations-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 40px;
+        }
+
+        @media (max-width: 600px) {
+            .locations-grid { grid-template-columns: 1fr; }
+        }
+
+        .location-card {
+            background-color: var(--white);
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: var(--shadow-md);
+            border: 1px solid rgba(230, 87, 47, 0.05);
+            display: flex;
+            flex-direction: column;
+            transition: var(--transition);
+        }
+
+        .location-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+            border-color: rgba(230, 87, 47, 0.2);
+        }
+
+        .map-placeholder {
+            height: 240px;
+            background: linear-gradient(45deg, #FFEFEA, #FFF4F0);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: var(--secondary);
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            border-bottom: 2px solid var(--primary-light);
+        }
+
+        .map-placeholder i {
+            font-size: 3.5rem;
+            color: var(--primary);
+            margin-bottom: 12px;
+        }
+
+        .map-placeholder p {
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: var(--secondary);
+        }
+
+        .location-info {
+            padding: 30px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .location-info h3 {
+            font-size: 1.5rem;
+            color: var(--secondary);
+            font-weight: 700;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .location-details {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+
+        .location-details li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .location-details li i {
+            color: var(--primary);
+            margin-top: 4px;
+            font-size: 1.1rem;
+        }
+
+        /* Contact & Footer */
+        footer {
+            background-color: var(--secondary);
+            color: var(--white);
+            padding: 80px 0 30px;
+            position: relative;
+            border-top: 6px solid var(--primary);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.2fr 1fr 1fr;
+            gap: 50px;
+            margin-bottom: 50px;
+        }
+
+        .footer-brand p {
+            color: rgba(255, 255, 255, 0.7);
+            margin-top: 20px;
+            margin-bottom: 25px;
+            font-size: 0.95rem;
+            max-width: 320px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-icon {
+            width: 42px;
+            height: 42px;
+            background-color: rgba(255, 255, 255, 0.08);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: var(--transition);
+            font-size: 1.1rem;
+            border: 1px solid transparent;
+        }
+
+        .social-icon:hover {
+            background-color: var(--primary);
+            border-color: var(--primary);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 12px rgba(230, 87, 47, 0.4);
+        }
+
+        .footer-links h4 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        .footer-links h4::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 35px;
+            height: 3px;
+            background-color: var(--primary);
+            border-radius: 2px;
+        }
+
+        .footer-menu {
+            list-style: none;
+        }
+
+        .footer-menu li {
+            margin-bottom: 12px;
+        }
+
+        .footer-menu a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.95rem;
+        }
+
+        .footer-menu a:hover {
+            color: var(--primary);
+            padding-left: 5px;
+        }
+
+        .footer-contact-list {
+            list-style: none;
+        }
+
+        .footer-contact-list li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.95rem;
+        }
+
+        .footer-contact-list li i {
+            color: var(--primary);
+            font-size: 1.1rem;
+            margin-top: 3px;
+        }
+
+        .footer-contact-list a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-contact-list a:hover {
+            color: var(--primary);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 30px;
+            text-align: center;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        /* Floating WhatsApp Action Button */
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25D366;
+            color: var(--white);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.2rem;
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+            text-decoration: none;
+            z-index: 999;
+            transition: var(--transition);
+        }
+
+        .floating-whatsapp:hover {
+            transform: scale(1.1) rotate(10deg);
+            background-color: #20ba5a;
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 992px) {
+            .hero-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            .hero-badge {
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .hero-title {
+                font-size: 3rem;
+            }
+            .hero-description {
+                margin-left: auto;
+                margin-right: auto;
+            }
+            .hero-ctas {
+                justify-content: center;
+            }
+            .hero-image-wrapper {
+                order: -1;
+            }
+            .best-seller-card {
+                grid-template-columns: 1fr;
+                text-align: center;
+                justify-items: center;
+            }
+            .combo-price-box {
+                max-width: 200px;
+                margin: 0 auto;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                position: fixed;
+                top: 98px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 98px);
+                background-color: var(--white);
+                flex-direction: column;
+                padding: 40px 24px;
+                gap: 25px;
+                transition: var(--transition);
+                box-shadow: 0 10px 15px rgba(0,0,0,0.05);
+                align-items: flex-start;
+            }
+            .nav-menu.active {
+                left: 0;
+            }
+            .menu-toggle {
+                display: block;
+            }
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <a href="https://wa.me/529511885103?text=Hola,%20me%20gustaría%20hacer%20un%20pedido" class="floating-whatsapp" target="_blank" rel="noopener noreferrer" title="Pedir por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <header id="header">
+        <div class="container nav-container">
+            <a href="#" class="logo-container">
+                <img src="img/logo-grande.png" onerror="this.style.opacity='0.4';" alt="Logo Carnitas" class="logo-img">
+            </a>
+            
+            <div class="menu-toggle" id="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#" class="nav-link active">Inicio</a></li>
+                <li><a href="#menu-especialidades" class="nav-link">Menú y Especialidades</a></li>
+                <li><a href="#pedir" class="nav-link">Pide en Línea</a></li>
+                <li><a href="#sucursales" class="nav-link">Sucursales</a></li>
+                <li><a href="#contacto" class="nav-link">Contacto</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-grid">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <i class="fas fa-fire"></i> Sabor Tradicional y Vivo
+                </div>
+                <h1 class="hero-title">Las mejores carnitas <br><span>100% Michoacanas</span></h1>
+                <p class="hero-description">Disfruta del auténtico sabor tradicional hecho con pasión y recetas heredadas. Carne tierna, doradita y perfectamente sazonada para complacer a toda la familia.</p>
+                <div class="hero-ctas">
+                    <a href="https://wa.me/529511885103?text=Hola,%20quiero%20hacer%20un%20pedido" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-whatsapp"></i> Ordenar por WhatsApp
+                    </a>
+                    <a href="tel:+529511885103" class="btn btn-secondary">
+                        <i class="fas fa-phone-alt"></i> Llamar al Restaurante
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image-wrapper">
+                <div class="hero-img-placeholder">
+                    <img src="img/logo-grande.png" onerror="this.style.display='none';" alt="Logotipo Oficial">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu-especialidades" class="specialties-video-bg">
+        <div class="bg-video-container">
+            <video id="bg-sequential-video" autoplay muted playsinline>
+                <source id="bg-video-src" src="video1.mp4" type="video/mp4">
+            </video>
+        </div>
+        <div class="bg-video-overlay"></div>
+
+        <div class="container specialties-content">
+            <div style="text-align: center;">
+                <div class="video-status-indicator">
+                    <i class="fas fa-compact-disc"></i> 
+                    <span id="video-status-text">Ambientación activa: video1.mp4</span>
+                </div>
+            </div>
+
+            <h2 class="section-title">Nuestro Menú Tradicional</h2>
+            <p class="section-subtitle">Explora nuestras delicias preparadas en tradicionales cazos de cobre y ollas de vapor. Sabor vivo en cada bocado.</p>
+            
+            <div class="menu-sections-container">
+                
+                <div class="best-seller-card">
+                    <div class="combo-image-frame">
+                        <img src="img/combo.jpeg" onerror="this.style.display='none';" alt="Foto del Combo">
+                    </div>
+                    <div class="combo-info">
+                        <h3><i class="fas fa-star" style="color: #FFD700;"></i> ¡Nuestro Best Seller!</h3>
+                        <p><strong>El Combo Consentido:</strong> Llévate 6 Tacos bien servidos de tu elección más 1 Refresco bien frío. ¡La combinación perfecta para saciar tu antojo!</p>
+                    </div>
+                    <div class="combo-price-box">
+                        <span class="price-label">Todo por solo</span>
+                        <span class="price-value">$120</span>
+                    </div>
+                </div>
+
+                <div class="menu-categories-grid">
+                    
+                    <div class="menu-category-box">
+                        <div>
+                            <div class="category-header">
+                                <i class="fas fa-utensils"></i>
+                                <h3>Tacos Tradicionales</h3>
+                            </div>
+                            <ul class="menu-items-list">
+                                <li class="menu-item">
+                                    <div class="menu-item-main">
+                                        <span class="menu-item-title">Tacos de Carnitas</span>
+                                        <span class="menu-item-dots"></span>
+                                        <span class="menu-item-price">Surtidos</span>
+                                    </div>
+                                    <span class="menu-item-desc">Elige tu estilo: Maciza, Costilla, Cuerito, Chamorro, Buche o Surtido.</span>
+                                </li>
+                                <li class="menu-item">
+                                    <div class="menu-item-main">
+                                        <span class="menu-item-title">Tacos al Vapor</span>
+                                        <span class="menu-item-dots"></span>
+                                        <span class="menu-item-price">Sabor Único</span>
+                                    </div>
+                                    <span class="menu-item-desc">Deliciosa Costilla de res y Lengua de res cocinadas tiernamente al vapor.</span>
+                                </li>
+                                <li class="menu-item">
+                                    <div class="menu-item-main">
+                                        <span class="menu-item-title">Tacos de Birria</span>
+                                        <span class="menu-item-dots"></span>
+                                        <span class="menu-item-price">¡Imperdibles!</span>
+                                    </div>
+                                    <span class="menu-item-desc">Con carne sazonada en adobo tradicional, jugosa y en doble tortilla.</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="menu-category-slider">
+                            <div class="slider-track">
+                                <div class="slider-slide">
+                                    <img src="img/tacos1.jpeg" onerror="this.style.display='none';">
+                                    <i class="fas fa-images"></i><span>[tacos1.jpg]</span>
+                                </div>
+                                <div class="slider-slide">
+                                    <img src="img/tacos2.jpeg" onerror="this.style.display='none';">
+                                    <i class="fas fa-images"></i><span>[tacos2.jpg]</span>
+                                </div>
+                                <div class="slider-slide">
+                                    <img src="img/tacos3.png" onerror="this.style.display='none';">
+                                    <i class="fas fa-images"></i><span>[tacos3.jpg]</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-category-box">
+                        <div>
+                            <div class="category-header">
+                                <i class="fas fa-bowl-rice"></i>
+                                <h3>Caldos Calientitos</h3>
+                            </div>
+                            <ul class="menu-items-list">
+                                <li class="menu-item">
+                                    <div class="menu-item-main">
+                                        <span class="menu-item-title">Pozole Tradicional</span>
+                                        <span class="menu-item-dots"></span>
+                                        <span class="menu-item-price">Familiar</span>
+                                    </div>
+                                    <span class="menu-item-desc">Con el grano tierno perfecto y abundante carne, acompañado de sus guarniciones.</span>
+                                </li>
+                                <li class="menu-item">
+                                    <div class="menu-item-main">
+                                        <span class="menu-item-title">Consomé de Birria</span>
+                                        <span class="menu-item-dots"></span>
+                                        <span class="menu-item-price">Especial</span>
+                                    </div>
+                                    <span class="menu-item-desc">Sabroso caldo de birria bien sazonado, calientito y con su porción de carne tierna.</span>
+                                </li>
+                                <li class="menu-item">
+                                    <div class="menu-item-main">
+                                        <span class="menu-item-title">Menudo de la Casa</span>
+                                        <span class="menu-item-dots"></span>
+                                        <span class="menu-item-price">Reconfortante</span>
+                                    </div>
+                                    <span class="menu-item-desc">El clásico caldo bien sazonado, limpio y caliente, ideal para el fin de semana.</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="menu-category-slider">
+                            <div class="slider-track">
+                                <div class="slider-slide">
+                                    <img src="img/caldos1.jpeg" onerror="this.style.display='none';">
+                                    <i class="fas fa-images"></i><span>[caldos1.jpg]</span>
+                                </div>
+                                <div class="slider-slide">
+                                    <img src="img/caldos2.jpeg" onerror="this.style.display='none';">
+                                    <i class="fas fa-images"></i><span>[caldos2.jpg]</span>
+                                </div>
+                                <div class="slider-slide">
+                                    <img src="img/caldos3.jpeg" onerror="this.style.display='none';">
+                                    <i class="fas fa-images"></i><span>[caldos3.jpg]</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-category-box">
+                        <div>
+                            <div class="category-header">
+                                <i class="fas fa-weight-hanging"></i>
+                                <h3>Para Compartir (Por Kilo)</h3>
+                            </div>
+                            <ul class="menu-items-list">
+                                <li class="menu-item">
+                                    <div class="menu-item-main">
+                                        <span class="menu-item-title">Carnitas por Kilo</span>
+                                        <span class="menu-item-dots"></span>
+                                        <span class="menu-item-price">Al Gusto</span>
+                                    </div>
+                                    <span class="menu-item-desc"><strong>Incluye gratis:</strong> Tortillas calientes y la variedad de salsas de la casa.</span>
+                                </li>
+                                <li class="menu-item">
+                                    <div class="menu-item-main">
+                                        <span class="menu-item-title">Costilla de Res al Vapor</span>
+                                        <span class="menu-item-dots"></span>
+                                        <span class="menu-item-price">Jugosa</span>
+                                    </div>
+                                    <span class="menu-item-desc">Carne sumamente suave y jugosa, puedes disfrutarla picada y lista para comer</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="menu-category-slider">
+                            <div class="slider-track">
+                                <div class="slider-slide">
+                                    <img src="img/kilo1.jpg" onerror="this.style.display='none';">
+                                    <i class="fas fa-images"></i><span>[kilo1.jpg]</span>
+                                </div>
+                                <div class="slider-slide">
+                                    <img src="img/kilo2.jpeg" onerror="this.style.display='none';">
+                                    <i class="fas fa-images"></i><span>[kilo2.jpg]</span>
+                                </div>
+                                <div class="slider-slide">
+                                    <img src="img/kilo3.jpeg" onerror="this.style.display='none';">
+                                    <i class="fas fa-images"></i><span>[kilo3.jpg]</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-category-box">
+                        <div>
+                            <div class="category-header">
+                                <i class="fas fa-face-smile-wink"></i>
+                                <h3>Antojos Populares</h3>
+                            </div>
+                            <ul class="menu-items-list">
+                                <li class="menu-item">
+                                    <div class="menu-item-main">
+                                        <span class="menu-item-title">Tortas de Carnitas</span>
+                                        <span class="menu-item-dots"></span>
+                                        <span class="menu-item-price">Tradicional</span>
+                                    </div>
+                                    <span class="menu-item-desc">Preparadas en pan crujiente, a la plancha, con carnitas o costilla de res, imperdibles</span>
+                                </li>
+                                <li class="menu-item">
+                                    <div class="menu-item-main">
+                                        <span class="menu-item-title">Tostadas de Carnitas</span>
+                                        <span class="menu-item-dots"></span>
+                                        <span class="menu-item-price">Crujientes</span>
+                                    </div>
+                                    <span class="menu-item-desc">Cargadas de amor y carnitas picadas, totalmente deliciosas!</span>
+                                </li>
+                                <li class="menu-item">
+                                    <div class="menu-item-main">
+                                        <span class="menu-item-title">Gorditas Rellenas</span>
+                                        <span class="menu-item-dots"></span>
+                                        <span class="menu-item-price">De la Casa</span>
+                                    </div>
+                                    <span class="menu-item-desc">Masa frita de maíz natural rellena de sabrosas carnitas picadas</span>
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="menu-category-slider">
+                            <div class="slider-track">
+                                <div class="slider-slide">
+                                    <img src="img/antojos1.jpeg" onerror="this.style.display='none';">
+                                    <i class="fas fa-images"></i><span>[antojos1.jpeg]</span>
+                                </div>
+                                <div class="slider-slide">
+                                    <img src="img/antojos2.jpeg" onerror="this.style.display='none';">
+                                    <i class="fas fa-images"></i><span>[antojos2.jpeg]</span>
+                                </div>
+                                <div class="slider-slide">
+                                    <img src="img/antojos3.jpg" onerror="this.style.display='none';">
+                                    <i class="fas fa-images"></i><span>[antojos3.jpg]</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pedir" class="delivery">
+        <div class="container">
+            <h2 class="section-title">Pide Desde Tu <span>App Favorita</span></h2>
+            <p class="section-subtitle">¿No quieres salir de casa? Llevamos el mejor sabor directamente hasta tu puerta a través de las plataformas líderes.</p>
+            
+            <div class="apps-grid">
+                <a href="https://www.rappi.com.mx/restaurantes/1930000811-carnitas-los-michoacanos" target="_blank" rel="noopener noreferrer" class="app-card app-rappi">
+                    <i class="fas fa-motorcycle"></i>
+                    <h4>Rappi</h4>
+                    <span class="app-btn">Pedir Ahora</span>
+                </a>
+                
+                <a href="https://www.didi-food.com/es-MX/food/store/5764607528479228138/?location_country=MX&country=MX&lang=es-MX&channel=19&pid=website_seo%3Futm_source%3Dgoogle&af_adset_id=null&af_ad_id=null&af_c_id=null&af_channel=null&c=undefined&campaign=landingpage_%2Fmx%2Ffood%2Foaxaca-oax%2Fcarnitas-los-michoacanos%2F5764607528479228138%2F&utm_medium=organic&utm_source=null&utm_campaign=undefined&utm_term=null&source=null&campaign_id=null&ad_group_id=null&creative_id=null&target_id=null&keyword=null&matchtype=null&devicemodel=null&adposition=null&placement=null&clientType=19&is_from_marketing=1&af_web_dp=https%3A%2F%2Fweb.didiglobal.com%2Fmx%2Fstore&pl=eyJwb2lJZCI6IjExMTU1ODc1NzA1NTQ2MzQyNDAiLCJhZGRyZXNzQWxsRGlzcGxheSI6InNhbnRhIGx1Y8OtYSBkZWwgY2FtaW5vLCBPYXhhY2EsIE1leGljbyIsImNpdHkiOiJPYXhhY2EiLCJjaXR5SWQiOjUyMjAwMTAwLCJjb3VudHJ5Q29kZSI6Ik1YIiwiY291bnRyeUlkIjo1MiwibGF0IjoxNy4wNjQ5ODg0OTIwNTcsImxuZyI6LTk2LjcwNjczNzQxMDI3NywiZGlzcGxheU5hbWUiOiJwcml2YWRhIGJyw61naWRhIGdhcmPDrWEgMjA1IiwiYWRkcmVzcyI6InNhbnRhIGx1Y8OtYSBkZWwgY2FtaW5vLCBPYXhhY2EsIE1leGljbyIsImFkZHJlc3NBbGwiOiJwcml2YWRhIGJyw61naWRhIGdhcmPDrWEgMjA1LCBzYW50YSBsdWPDrWEgZGVsIGNhbWlubywgT2F4YWNhLCBNZXhpY28iLCJjb29yZGluYXRlVHlwZSI6Indnczg0IiwicG9pU3JjVGFnIjoibWFudWFsX3JnZW8iLCJzcmNUYWciOiJyZXZlcnNlZ2VvdG9wIiwic2VhcmNoSWQiOiIwYThmNzk3YzZhMjdhZmZlNTNiZjZmMzYwM2ExNzUwMiIsImRpc3RTdHIiOiIybSIsInBvaVR5cGUiOiJQb2ludCBBZGRyZXNzIiwiY291bnR5SWQiOjUyMjAwMTE2LCJjb3VudHlHcm91cElkIjo1MjIwMDEwMDAwMDF9" target="_blank" rel="noopener noreferrer" class="app-card app-didi">
+                    <i class="fas fa-hamburger"></i>
+                    <h4>DiDi Food</h4>
+                    <span class="app-btn">Pedir Ahora</span>
+                </a>
+                
+                <a href="https://www.ubereats.com/mx/store/carnitas-%E2%80%9Clos-michoacanos%E2%80%9D-reforma/qHK-KUhQQ1uxJn1xB-aUYw" target="_blank" rel="noopener noreferrer" class="app-card app-uber">
+                    <i class="fas fa-shopping-bag"></i>
+                    <h4>Uber Eats</h4>
+                    <span class="app-btn">Pedir Ahora</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="sucursales" class="locations">
+        <div class="container">
+            <h2 class="section-title">Visita Nuestras Sucursales</h2>
+            <p class="section-subtitle">Contamos con dos cómodos establecimientos listos para darte la mejor atención con el sabor más vivo.</p>
+            
+            <div class="locations-grid">
+                <div class="location-card">
+                    <div class="map-placeholder">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <p>Sucursal Camino Nacional</p>
+                    </div>
+                    <div class="location-info">
+                        <div>
+                            <h3>Camino Nacional</h3>
+                            <ul class="location-details">
+                                <li><i class="fas fa-map-marker-alt"></i> Av. Camino Nacional #123, Centro</li>
+                                <li><i class="fas fa-clock"></i> Lun a Dom: 8:00 AM - 5:00 PM</li>
+                                <li><i class="fas fa-parking"></i> Estacionamiento disponible</li>
+                            </ul>
+                        </div>
+                        <a href="https://maps.app.goo.gl/mXjRLuPRe924MTmZA" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="width: 100%;">
+                            <i class="fas fa-directions"></i> Ver en Google Maps
+                        </a>
+                    </div>
+                </div>
+
+                <div class="location-card">
+                    <div class="map-placeholder">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <p>Sucursal Colonia Reforma</p>
+                    </div>
+                    <div class="location-info">
+                        <div>
+                            <h3>Colonia Reforma</h3>
+                            <ul class="location-details">
+                                <li><i class="fas fa-map-marker-alt"></i> Calle de la República #456, Col. Reforma</li>
+                                <li><i class="fas fa-clock"></i> Lun a Dom: 8:00 AM - 6:00 PM</li>
+                                <li><i class="fas fa-wifi"></i> Zona Familiar con Wi-Fi</li>
+                            </ul>
+                        </div>
+                        <a href="https://maps.app.goo.gl/g79eYJfWZgaCKzKi9" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="width: 100%;">
+                            <i class="fas fa-directions"></i> Ver en Google Maps
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contacto">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <img src="img/logo-grande.png" onerror="this.style.opacity='0.4';" alt="Carnitas Los Michoacanos" style="height: 55px; width: auto; margin-bottom: 15px; filter: brightness(0) invert(1);">
+                <p>Llevamos la tradición y el auténtico sabor del cazo a tu mesa. Un concepto 100% familiar hecho con amor.</p>
+                <div class="social-links">
+                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon"><i class="fab fa-instagram"></i></a>
+                    <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" class="social-icon"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <h4>Navegación</h4>
+                <ul class="footer-menu">
+                    <li><a href="#"><i class="fas fa-chevron-right"></i> Inicio</a></li>
+                    <li><a href="#menu-especialidades"><i class="fas fa-chevron-right"></i> Menú Completo</a></li>
+                    <li><a href="#pedir"><i class="fas fa-chevron-right"></i> Pide en Línea</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4>Contacto y Pedidos</h4>
+                <ul class="footer-contact-list">
+                    <li>
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <strong>Sucursal Camino Nacional:</strong><br>
+                            <a href="tel:+529511885103">+52 (951) 188-5103</a>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <strong>Sucursal Colonia Reforma:</strong><br>
+                            <a href="tel:+529517654321">+52 (951) 765-4321</a>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <strong>Pedidos Banquetes / Eventos:</strong><br>
+                            <a href="tel:+529519998888">+52 (951) 999-8888</a>
+                        </div>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <strong>Correo Electrónico:</strong><br>
+                            <a href="mailto:contacto@carnitaslosmichoacanos.com">contacto@carnitaslosmichoacanos.com</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 Carnitas Los Michoacanos. Todos los derechos reservados. Diseñado con cariño familiar.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth sticky navbar logic
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+            
+            const sections = document.querySelectorAll('section, footer');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            let currentSectionId = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 140;
+                if (window.scrollY >= sectionTop) {
+                    currentSectionId = section.getAttribute('id') || '';
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${currentSectionId}` || (currentSectionId === '' && link.getAttribute('href') === '#')) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Mobile sidebar menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const navMenu = document.getElementById('nav-menu');
+        const navLinks = document.querySelectorAll('.nav-link');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            const icon = mobileMenuBtn.querySelector('i');
+            if (navMenu.classList.contains('active')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                const icon = mobileMenuBtn.querySelector('i');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            });
+        });
+
+        // BACKGROUND SEQUENTIAL PLAYLIST SCRIPT
+        const bgPlaylist = ['video1.mp4', 'video2.mp4', 'video3.mp4'];
+        let currentBgIndex = 0;
+        
+        const bgVideoPlayer = document.getElementById('bg-sequential-video');
+        const bgVideoSrc = document.getElementById('bg-video-src');
+        const videoStatusText = document.getElementById('video-status-text');
+
+        bgVideoPlayer.addEventListener('ended', function() {
+            currentBgIndex++;
+            if (currentBgIndex >= bgPlaylist.length) {
+                currentBgIndex = 0;
+            }
+            
+            bgVideoSrc.src = bgPlaylist[currentBgIndex];
+            bgVideoPlayer.load();
+            videoStatusText.textContent = "Ambientación activa: " + bgPlaylist[currentBgIndex];
+            
+            bgVideoPlayer.play().catch(err => {
+                console.log("Auto-play background video prevented until user clicks anywhere.");
+            });
+        });
+
+        document.body.addEventListener('click', function() {
+            if (bgVideoPlayer.paused) {
+                bgVideoPlayer.play().catch(e => console.log(e));
+            }
+        }, { once: true });
+    </script>
+</body>
+</html>
