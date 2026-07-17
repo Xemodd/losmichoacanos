@@ -1,9 +1,59 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-MX">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carnitas Los Michoacanos | El Auténtico Sabor Michoacano</title>
+    
+    <!-- ================= SEO BÁSICO ================= -->
+    <title>Carnitas Los Michoacanos | El Auténtico Sabor Michoacano en Oaxaca</title>
+    <meta name="description" content="Disfruta de las mejores carnitas 100% michoacanas en Oaxaca. Sabor tradicional en nuestros deliciosos tacos, pozole, birria y especialidades. ¡Pide a domicilio o visítanos!">
+    <meta name="keywords" content="fiesta, fiesta oaxaqueña, carnitas, tacos, tortas, carnitas en oaxaca, tacos de carnitas, comida tradicional, restaurante familiar oaxaca, birria, pozole, comida a domicilio oaxaca, los michoacanos, carnitas por kilo, guelaguetza">
+    <meta name="author" content="Carnitas Los Michoacanos">
+    <meta name="robots" content="index, follow">
+    
+    <!-- ================= OPEN GRAPH / REDES SOCIALES ================= -->
+    <meta property="og:title" content="Carnitas Los Michoacanos | El Auténtico Sabor">
+    <meta property="og:description" content="Las mejores carnitas 100% michoacanas en Oaxaca. ¡Ven a disfrutar de nuestro combo consentido, tacos y caldos calientitos!">
+    <meta property="og:image" content="img/combo.jpeg">
+    <meta property="og:type" content="restaurant.restaurant">
+    <meta property="og:locale" content="es_MX">
+
+    <!-- ================= TWITTER CARDS ================= -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Carnitas Los Michoacanos | El Auténtico Sabor">
+    <meta name="twitter:description" content="Las mejores carnitas 100% michoacanas en Oaxaca. ¡Pide a domicilio o visita nuestras sucursales!">
+    <meta name="twitter:image" content="img/combo.jpeg">
+
+    <!-- ================= DATOS ESTRUCTURADOS (SCHEMA.ORG) PARA SEO LOCAL ================= -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "Carnitas Los Michoacanos",
+      "image": "img/logo-grande.png",
+      "description": "El auténtico sabor tradicional de las carnitas 100% michoacanas en Oaxaca.",
+      "telephone": "+529511885103",
+      "servesCuisine": "Mexicana, Carnitas, Tacos",
+      "priceRange": "$$",
+      "address": [
+        {
+          "@type": "PostalAddress",
+          "streetAddress": "Av. Camino Nacional",
+          "addressLocality": "Santa Lucía del Camino",
+          "addressRegion": "Oaxaca",
+          "addressCountry": "MX"
+        },
+        {
+          "@type": "PostalAddress",
+          "streetAddress": "Calle Amapolas esquina Álamos #1000, Colonia Reforma",
+          "addressLocality": "Oaxaca de Juárez",
+          "addressRegion": "Oaxaca",
+          "addressCountry": "MX"
+        }
+      ]
+    }
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
@@ -1046,18 +1096,18 @@
 </head>
 <body>
 
-    <a href="https://wa.me/529511885103?text=Hola,%20me%20gustaría%20hacer%20un%20pedido" class="floating-whatsapp" target="_blank" rel="noopener noreferrer" title="Pedir por WhatsApp">
-        <i class="fab fa-whatsapp"></i>
+    <a href="https://wa.me/529511885103?text=Hola,%20me%20gustaría%20hacer%20un%20pedido" class="floating-whatsapp" target="_blank" rel="noopener noreferrer" title="Pedir carnitas por WhatsApp" aria-label="Pedir por WhatsApp">
+        <i class="fab fa-whatsapp" aria-hidden="true"></i>
     </a>
 
     <header id="header">
-        <div class="container nav-container">
-            <a href="#" class="logo-container">
-                <img src="img/logo-grande.png" onerror="this.style.opacity='0.4';" alt="Logo Carnitas" class="logo-img">
+        <nav class="container nav-container" aria-label="Navegación principal">
+            <a href="#" class="logo-container" title="Carnitas Los Michoacanos Inicio">
+                <img src="img/logo-grande.png" onerror="this.style.opacity='0.4';" alt="Logotipo oficial de Carnitas Los Michoacanos" class="logo-img">
             </a>
             
-            <div class="menu-toggle" id="mobile-menu-btn">
-                <i class="fas fa-bars"></i>
+            <div class="menu-toggle" id="mobile-menu-btn" aria-label="Abrir menú de navegación" role="button" tabindex="0">
+                <i class="fas fa-bars" aria-hidden="true"></i>
             </div>
 
             <ul class="nav-menu" id="nav-menu">
@@ -1067,406 +1117,405 @@
                 <li><a href="#sucursales" class="nav-link">Sucursales</a></li>
                 <li><a href="#contacto" class="nav-link">Contacto</a></li>
             </ul>
-        </div>
+        </nav>
     </header>
 
-    <section class="hero">
-        <div class="container hero-grid">
-            <div class="hero-content">
-                <div class="hero-badge">
-                    <i class="fas fa-fire"></i> Sabor Tradicional y Vivo
+    <!-- Contenedor semántico principal -->
+    <main id="main-content">
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <i class="fas fa-fire" aria-hidden="true"></i> Sabor Tradicional y Vivo
+                    </div>
+                    <h1 class="hero-title" id="hero-title">Las mejores carnitas <br><span>100% Michoacanas</span></h1>
+                    <p class="hero-description">Disfruta del auténtico sabor tradicional hecho con pasión y recetas heredadas. Carne tierna, doradita y perfectamente sazonada para complacer a toda la familia en Oaxaca.</p>
+                    <div class="hero-ctas">
+                        <a href="https://wa.me/529511885103?text=Hola,%20quiero%20hacer%20un%20pedido" class="btn btn-primary" target="_blank" rel="noopener noreferrer" title="Haz tu pedido por WhatsApp">
+                            <i class="fab fa-whatsapp" aria-hidden="true"></i> Ordenar por WhatsApp
+                        </a>
+                        <a href="tel:+529511885103" class="btn btn-secondary" title="Llamar a la sucursal Camino Nacional">
+                            <i class="fas fa-phone-alt" aria-hidden="true"></i> Llamar al Restaurante
+                        </a>
+                    </div>
                 </div>
-                <h1 class="hero-title">Las mejores carnitas <br><span>100% Michoacanas</span></h1>
-                <p class="hero-description">Disfruta del auténtico sabor tradicional hecho con pasión y recetas heredadas. Carne tierna, doradita y perfectamente sazonada para complacer a toda la familia.</p>
-                <div class="hero-ctas">
-                    <a href="https://wa.me/529511885103?text=Hola,%20quiero%20hacer%20un%20pedido" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-whatsapp"></i> Ordenar por WhatsApp
-                    </a>
-                    <a href="tel:+529511885103" class="btn btn-secondary">
-                        <i class="fas fa-phone-alt"></i> Llamar al Restaurante
-                    </a>
-                </div>
-            </div>
-            <div class="hero-image-wrapper">
-                <div class="hero-img-placeholder">
-                    <img src="img/logo-grande.png" onerror="this.style.display='none';" alt="Logotipo Oficial">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="menu-especialidades" class="specialties-video-bg">
-        <div class="bg-video-container">
-            <video id="bg-sequential-video" autoplay muted playsinline>
-                <source id="bg-video-src" src="video1.mp4" type="video/mp4">
-            </video>
-        </div>
-        <div class="bg-video-overlay"></div>
-
-        <div class="container specialties-content">
-            <div style="text-align: center;">
-                <div class="video-status-indicator">
-                    <i class="fas fa-compact-disc"></i> 
-                    <span id="video-status-text">Ambientación activa: video1.mp4</span>
+                <div class="hero-image-wrapper">
+                    <div class="hero-img-placeholder">
+                        <img src="img/logo-grande.png" onerror="this.style.display='none';" alt="Logotipo Oficial Carnitas Los Michoacanos">
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <h2 class="section-title">Nuestro Menú Tradicional</h2>
-            <p class="section-subtitle">Explora nuestras delicias preparadas en tradicionales cazos de cobre y ollas de vapor. Sabor vivo en cada bocado.</p>
-            
-            <div class="menu-sections-container">
+        <section id="menu-especialidades" class="specialties-video-bg" aria-labelledby="menu-title">
+            <div class="bg-video-container">
+                <video id="bg-sequential-video" autoplay muted playsinline aria-label="Video de preparación de carnitas tradicionales">
+                    <source id="bg-video-src" src="video1.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="bg-video-overlay"></div>
+
+            <div class="container specialties-content">
+                <div style="text-align: center;">
+                    <div class="video-status-indicator">
+                        <i class="fas fa-compact-disc" aria-hidden="true"></i> 
+                        <span id="video-status-text">Ambientación activa: video1.mp4</span>
+                    </div>
+                </div>
+
+                <h2 class="section-title" id="menu-title">Nuestro Menú Tradicional</h2>
+                <p class="section-subtitle">Explora nuestras delicias preparadas en el tradicional cazo de cobre y vaporera. Sabor vivo en cada bocado.</p>
                 
-                <div class="best-seller-card">
-                    <div class="combo-image-frame">
-                        <img src="img/combo.jpeg" onerror="this.style.display='none';" alt="Foto del Combo">
-                    </div>
-                    <div class="combo-info">
-                        <h3><i class="fas fa-star" style="color: #FFD700;"></i> ¡Nuestro Best Seller!</h3>
-                        <p><strong>El Combo Consentido:</strong> Llévate 6 Tacos bien servidos de tu elección más 1 Refresco bien frío. ¡La combinación perfecta para saciar tu antojo!</p>
-                    </div>
-                    <div class="combo-price-box">
-                        <span class="price-label">Todo por solo</span>
-                        <span class="price-value">$120</span>
-                    </div>
-                </div>
-
-                <div class="menu-categories-grid">
+                <div class="menu-sections-container">
                     
-                    <div class="menu-category-box">
-                        <div>
-                            <div class="category-header">
-                                <i class="fas fa-utensils"></i>
-                                <h3>Tacos Tradicionales</h3>
-                            </div>
-                            <ul class="menu-items-list">
-                                <li class="menu-item">
-                                    <div class="menu-item-main">
-                                        <span class="menu-item-title">Tacos de Carnitas</span>
-                                        <span class="menu-item-dots"></span>
-                                        <span class="menu-item-price">Surtidos</span>
-                                    </div>
-                                    <span class="menu-item-desc">Elige tu estilo: Maciza, Costilla, Cuerito, Chamorro, Buche o Surtido.</span>
-                                </li>
-                                <li class="menu-item">
-                                    <div class="menu-item-main">
-                                        <span class="menu-item-title">Tacos al Vapor</span>
-                                        <span class="menu-item-dots"></span>
-                                        <span class="menu-item-price">Sabor Único</span>
-                                    </div>
-                                    <span class="menu-item-desc">Deliciosa Costilla de res y Lengua de res cocinadas tiernamente al vapor.</span>
-                                </li>
-                                <li class="menu-item">
-                                    <div class="menu-item-main">
-                                        <span class="menu-item-title">Tacos de Birria</span>
-                                        <span class="menu-item-dots"></span>
-                                        <span class="menu-item-price">¡Imperdibles!</span>
-                                    </div>
-                                    <span class="menu-item-desc">Con carne sazonada en adobo tradicional, jugosa y en doble tortilla.</span>
-                                </li>
-                            </ul>
+                    <div class="best-seller-card">
+                        <div class="combo-image-frame">
+                            <img src="img/combo.jpeg" onerror="this.style.display='none';" alt="Combo Consentido: 6 tacos de carnitas y refresco">
                         </div>
-                        
-                        <div class="menu-category-slider">
-                            <div class="slider-track">
-                                <div class="slider-slide">
-                                    <img src="img/tacos1.jpeg" onerror="this.style.display='none';">
-                                    <i class="fas fa-images"></i><span>[tacos1.jpg]</span>
-                                </div>
-                                <div class="slider-slide">
-                                    <img src="img/tacos2.jpeg" onerror="this.style.display='none';">
-                                    <i class="fas fa-images"></i><span>[tacos2.jpg]</span>
-                                </div>
-                                <div class="slider-slide">
-                                    <img src="img/tacos3.png" onerror="this.style.display='none';">
-                                    <i class="fas fa-images"></i><span>[tacos3.jpg]</span>
-                                </div>
-                            </div>
+                        <div class="combo-info">
+                            <h3><i class="fas fa-star" style="color: #FFD700;" aria-hidden="true"></i> ¡Nuestro Best Seller!</h3>
+                            <p><strong>El Combo Consentido:</strong> Llévate 6 Tacos bien servidos de tu elección más 1 Refresco bien frío. ¡La combinación perfecta para saciar tu antojo!</p>
+                        </div>
+                        <div class="combo-price-box">
+                            <span class="price-label">Todo por solo</span>
+                            <span class="price-value">$120</span>
                         </div>
                     </div>
 
-                    <div class="menu-category-box">
-                        <div>
-                            <div class="category-header">
-                                <i class="fas fa-bowl-rice"></i>
-                                <h3>Caldos Calientitos</h3>
-                            </div>
-                            <ul class="menu-items-list">
-                                <li class="menu-item">
-                                    <div class="menu-item-main">
-                                        <span class="menu-item-title">Pozole Tradicional</span>
-                                        <span class="menu-item-dots"></span>
-                                        <span class="menu-item-price">Familiar</span>
-                                    </div>
-                                    <span class="menu-item-desc">Con el grano tierno perfecto y abundante carne, acompañado de sus guarniciones.</span>
-                                </li>
-                                <li class="menu-item">
-                                    <div class="menu-item-main">
-                                        <span class="menu-item-title">Consomé de Birria</span>
-                                        <span class="menu-item-dots"></span>
-                                        <span class="menu-item-price">Especial</span>
-                                    </div>
-                                    <span class="menu-item-desc">Sabroso caldo de birria bien sazonado, calientito y con su porción de carne tierna.</span>
-                                </li>
-                                <li class="menu-item">
-                                    <div class="menu-item-main">
-                                        <span class="menu-item-title">Menudo de la Casa</span>
-                                        <span class="menu-item-dots"></span>
-                                        <span class="menu-item-price">Reconfortante</span>
-                                    </div>
-                                    <span class="menu-item-desc">El clásico caldo bien sazonado, limpio y caliente, ideal para el fin de semana.</span>
-                                </li>
-                            </ul>
-                        </div>
+                    <div class="menu-categories-grid">
                         
-                        <div class="menu-category-slider">
-                            <div class="slider-track">
-                                <div class="slider-slide">
-                                    <img src="img/caldos1.jpeg" onerror="this.style.display='none';">
-                                    <i class="fas fa-images"></i><span>[caldos1.jpg]</span>
+                        <div class="menu-category-box">
+                            <div>
+                                <div class="category-header">
+                                    <i class="fas fa-utensils" aria-hidden="true"></i>
+                                    <h3>Tacos Tradicionales</h3>
                                 </div>
-                                <div class="slider-slide">
-                                    <img src="img/caldos2.jpeg" onerror="this.style.display='none';">
-                                    <i class="fas fa-images"></i><span>[caldos2.jpg]</span>
-                                </div>
-                                <div class="slider-slide">
-                                    <img src="img/caldos3.jpeg" onerror="this.style.display='none';">
-                                    <i class="fas fa-images"></i><span>[caldos3.jpg]</span>
+                                <ul class="menu-items-list">
+                                    <li class="menu-item">
+                                        <div class="menu-item-main">
+                                            <span class="menu-item-title">Tacos de Carnitas</span>
+                                            <span class="menu-item-dots"></span>
+                                            <span class="menu-item-price">Surtidos</span>
+                                        </div>
+                                        <span class="menu-item-desc">Elige tu estilo: Maciza, Costilla, Cuerito, Chamorro, Buche o Surtido.</span>
+                                    </li>
+                                    <li class="menu-item">
+                                        <div class="menu-item-main">
+                                            <span class="menu-item-title">Tacos al Vapor</span>
+                                            <span class="menu-item-dots"></span>
+                                            <span class="menu-item-price">Sabor Único</span>
+                                        </div>
+                                        <span class="menu-item-desc">Deliciosa Costilla de res y Lengua de res cocinadas tiernamente al vapor.</span>
+                                    </li>
+                                    <li class="menu-item">
+                                        <div class="menu-item-main">
+                                            <span class="menu-item-title">Tacos de Birria</span>
+                                            <span class="menu-item-dots"></span>
+                                            <span class="menu-item-price">¡Imperdibles!</span>
+                                        </div>
+                                        <span class="menu-item-desc">Con carne sazonada en adobo tradicional, jugosa y en doble tortilla.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="menu-category-slider">
+                                <div class="slider-track">
+                                    <div class="slider-slide">
+                                        <img src="img/tacos1.jpeg" onerror="this.style.display='none';" alt="Tacos de carnitas tradicionales al estilo Michoacán">
+                                        <i class="fas fa-images" aria-hidden="true"></i><span>[tacos1.jpg]</span>
+                                    </div>
+                                    <div class="slider-slide">
+                                        <img src="img/tacos2.jpeg" onerror="this.style.display='none';" alt="Tacos jugosos al vapor de res">
+                                        <i class="fas fa-images" aria-hidden="true"></i><span>[tacos2.jpg]</span>
+                                    </div>
+                                    <div class="slider-slide">
+                                        <img src="img/tacos3.png" onerror="this.style.display='none';" alt="Tacos de birria doble tortilla">
+                                        <i class="fas fa-images" aria-hidden="true"></i><span>[tacos3.jpg]</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="menu-category-box">
-                        <div>
-                            <div class="category-header">
-                                <i class="fas fa-weight-hanging"></i>
-                                <h3>Para Compartir (Por Kilo)</h3>
+                        <div class="menu-category-box">
+                            <div>
+                                <div class="category-header">
+                                    <i class="fas fa-bowl-rice" aria-hidden="true"></i>
+                                    <h3>Caldos Calientitos</h3>
+                                </div>
+                                <ul class="menu-items-list">
+                                    <li class="menu-item">
+                                        <div class="menu-item-main">
+                                            <span class="menu-item-title">Pozole Tradicional</span>
+                                            <span class="menu-item-dots"></span>
+                                            <span class="menu-item-price">Familiar</span>
+                                        </div>
+                                        <span class="menu-item-desc">Con el grano tierno perfecto y abundante carne, acompañado de sus guarniciones.</span>
+                                    </li>
+                                    <li class="menu-item">
+                                        <div class="menu-item-main">
+                                            <span class="menu-item-title">Consomé de Birria</span>
+                                            <span class="menu-item-dots"></span>
+                                            <span class="menu-item-price">Especial</span>
+                                        </div>
+                                        <span class="menu-item-desc">Sabroso caldo de birria bien sazonado, calientito y con su porción de carne tierna.</span>
+                                    </li>
+                                    <li class="menu-item">
+                                        <div class="menu-item-main">
+                                            <span class="menu-item-title">Menudo de la Casa</span>
+                                            <span class="menu-item-dots"></span>
+                                            <span class="menu-item-price">Reconfortante</span>
+                                        </div>
+                                        <span class="menu-item-desc">El clásico caldo bien sazonado, limpio y caliente, ideal para el fin de semana.</span>
+                                    </li>
+                                </ul>
                             </div>
-                            <ul class="menu-items-list">
-                                <li class="menu-item">
-                                    <div class="menu-item-main">
-                                        <span class="menu-item-title">Carnitas por Kilo</span>
-                                        <span class="menu-item-dots"></span>
-                                        <span class="menu-item-price">Al Gusto</span>
+                            
+                            <div class="menu-category-slider">
+                                <div class="slider-track">
+                                    <div class="slider-slide">
+                                        <img src="img/caldos1.jpeg" onerror="this.style.display='none';" alt="Plato de pozole tradicional con guarniciones">
+                                        <i class="fas fa-images" aria-hidden="true"></i><span>[caldos1.jpg]</span>
                                     </div>
-                                    <span class="menu-item-desc"><strong>Incluye gratis:</strong> Tortillas calientes y la variedad de salsas de la casa.</span>
-                                </li>
-                                <li class="menu-item">
-                                    <div class="menu-item-main">
-                                        <span class="menu-item-title">Costilla de Res al Vapor</span>
-                                        <span class="menu-item-dots"></span>
-                                        <span class="menu-item-price">Jugosa</span>
+                                    <div class="slider-slide">
+                                        <img src="img/caldos2.jpeg" onerror="this.style.display='none';" alt="Consomé calientito de birria de la casa">
+                                        <i class="fas fa-images" aria-hidden="true"></i><span>[caldos2.jpg]</span>
                                     </div>
-                                    <span class="menu-item-desc">Carne sumamente suave y jugosa, puedes disfrutarla picada y lista para comer</span>
-                                </li>
-                            </ul>
-                        </div>
-                        
-                        <div class="menu-category-slider">
-                            <div class="slider-track">
-                                <div class="slider-slide">
-                                    <img src="img/kilo1.jpg" onerror="this.style.display='none';">
-                                    <i class="fas fa-images"></i><span>[kilo1.jpg]</span>
-                                </div>
-                                <div class="slider-slide">
-                                    <img src="img/kilo2.jpeg" onerror="this.style.display='none';">
-                                    <i class="fas fa-images"></i><span>[kilo2.jpg]</span>
-                                </div>
-                                <div class="slider-slide">
-                                    <img src="img/kilo3.jpeg" onerror="this.style.display='none';">
-                                    <i class="fas fa-images"></i><span>[kilo3.jpg]</span>
+                                    <div class="slider-slide">
+                                        <img src="img/caldos3.jpeg" onerror="this.style.display='none';" alt="Menudo tradicional sabroso y reconfortante">
+                                        <i class="fas fa-images" aria-hidden="true"></i><span>[caldos3.jpg]</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="menu-category-box">
-                        <div>
-                            <div class="category-header">
-                                <i class="fas fa-face-smile-wink"></i>
-                                <h3>Antojos Populares</h3>
+                        <div class="menu-category-box">
+                            <div>
+                                <div class="category-header">
+                                    <i class="fas fa-weight-hanging" aria-hidden="true"></i>
+                                    <h3>Para Compartir (Por Kilo)</h3>
+                                </div>
+                                <ul class="menu-items-list">
+                                    <li class="menu-item">
+                                        <div class="menu-item-main">
+                                            <span class="menu-item-title">Carnitas por Kilo</span>
+                                            <span class="menu-item-dots"></span>
+                                            <span class="menu-item-price">Al Gusto</span>
+                                        </div>
+                                        <span class="menu-item-desc"><strong>Incluye gratis:</strong> Tortillas calientes y la variedad de salsas de la casa.</span>
+                                    </li>
+                                    <li class="menu-item">
+                                        <div class="menu-item-main">
+                                            <span class="menu-item-title">Costilla de Res al Vapor</span>
+                                            <span class="menu-item-dots"></span>
+                                            <span class="menu-item-price">Jugosa</span>
+                                        </div>
+                                        <span class="menu-item-desc">Carne sumamente suave y jugosa, puedes disfrutarla picada y lista para comer</span>
+                                    </li>
+                                </ul>
                             </div>
-                            <ul class="menu-items-list">
-                                <li class="menu-item">
-                                    <div class="menu-item-main">
-                                        <span class="menu-item-title">Tortas de Carnitas</span>
-                                        <span class="menu-item-dots"></span>
-                                        <span class="menu-item-price">Tradicional</span>
+                            
+                            <div class="menu-category-slider">
+                                <div class="slider-track">
+                                    <div class="slider-slide">
+                                        <img src="img/kilo1.jpg" onerror="this.style.display='none';" alt="Carnitas surtidas por kilo para la familia">
+                                        <i class="fas fa-images" aria-hidden="true"></i><span>[kilo1.jpg]</span>
                                     </div>
-                                    <span class="menu-item-desc">Preparadas en pan crujiente, a la plancha, con carnitas o costilla de res, imperdibles</span>
-                                </li>
-                                <li class="menu-item">
-                                    <div class="menu-item-main">
-                                        <span class="menu-item-title">Tostadas de Carnitas</span>
-                                        <span class="menu-item-dots"></span>
-                                        <span class="menu-item-price">Crujientes</span>
+                                    <div class="slider-slide">
+                                        <img src="img/kilo2.jpeg" onerror="this.style.display='none';" alt="Maciza y costilla de res por kilo listas para comer">
+                                        <i class="fas fa-images" aria-hidden="true"></i><span>[kilo2.jpg]</span>
                                     </div>
-                                    <span class="menu-item-desc">Cargadas de amor y carnitas picadas, totalmente deliciosas!</span>
-                                </li>
-                                <li class="menu-item">
-                                    <div class="menu-item-main">
-                                        <span class="menu-item-title">Gorditas Rellenas</span>
-                                        <span class="menu-item-dots"></span>
-                                        <span class="menu-item-price">De la Casa</span>
+                                    <div class="slider-slide">
+                                        <img src="img/kilo3.jpeg" onerror="this.style.display='none';" alt="Carne fresca de carnitas picada y preparada">
+                                        <i class="fas fa-images" aria-hidden="true"></i><span>[kilo3.jpg]</span>
                                     </div>
-                                    <span class="menu-item-desc">Masa frita de maíz natural rellena de sabrosas carnitas picadas</span>
-                                </li>
-                            </ul>
-                        </div>
-                        
-                        <div class="menu-category-slider">
-                            <div class="slider-track">
-                                <div class="slider-slide">
-                                    <img src="img/antojos1.jpeg" onerror="this.style.display='none';">
-                                    <i class="fas fa-images"></i><span>[antojos1.jpeg]</span>
-                                </div>
-                                <div class="slider-slide">
-                                    <img src="img/antojos2.jpeg" onerror="this.style.display='none';">
-                                    <i class="fas fa-images"></i><span>[antojos2.jpeg]</span>
-                                </div>
-                                <div class="slider-slide">
-                                    <img src="img/antojos3.jpg" onerror="this.style.display='none';">
-                                    <i class="fas fa-images"></i><span>[antojos3.jpg]</span>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
+                        <div class="menu-category-box">
+                            <div>
+                                <div class="category-header">
+                                    <i class="fas fa-face-smile-wink" aria-hidden="true"></i>
+                                    <h3>Antojos Populares</h3>
+                                </div>
+                                <ul class="menu-items-list">
+                                    <li class="menu-item">
+                                        <div class="menu-item-main">
+                                            <span class="menu-item-title">Tortas de Carnitas</span>
+                                            <span class="menu-item-dots"></span>
+                                            <span class="menu-item-price">Tradicional</span>
+                                        </div>
+                                        <span class="menu-item-desc">Preparadas en pan crujiente, a la plancha, con carnitas o costilla de res, imperdibles</span>
+                                    </li>
+                                    <li class="menu-item">
+                                        <div class="menu-item-main">
+                                            <span class="menu-item-title">Tostadas de Carnitas</span>
+                                            <span class="menu-item-dots"></span>
+                                            <span class="menu-item-price">Crujientes</span>
+                                        </div>
+                                        <span class="menu-item-desc">Cargadas de amor y carnitas picadas, totalmente deliciosas!</span>
+                                    </li>
+                                    <li class="menu-item">
+                                        <div class="menu-item-main">
+                                            <span class="menu-item-title">Gorditas Rellenas</span>
+                                            <span class="menu-item-dots"></span>
+                                            <span class="menu-item-price">De la Casa</span>
+                                        </div>
+                                        <span class="menu-item-desc">Masa frita de maíz natural rellena de sabrosas carnitas picadas</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="menu-category-slider">
+                                <div class="slider-track">
+                                    <div class="slider-slide">
+                                        <img src="img/antojos1.jpeg" onerror="this.style.display='none';" alt="Torta tradicional de carnitas en pan crujiente">
+                                        <i class="fas fa-images" aria-hidden="true"></i><span>[antojos1.jpeg]</span>
+                                    </div>
+                                    <div class="slider-slide">
+                                        <img src="img/antojos2.jpeg" onerror="this.style.display='none';" alt="Tostada gigante y crujiente de carnitas picadas">
+                                        <i class="fas fa-images" aria-hidden="true"></i><span>[antojos2.jpeg]</span>
+                                    </div>
+                                    <div class="slider-slide">
+                                        <img src="img/antojos3.jpg" onerror="this.style.display='none';" alt="Gordita frita de maíz rellena de chicharrón y carnita">
+                                        <i class="fas fa-images" aria-hidden="true"></i><span>[antojos3.jpg]</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="pedir" class="delivery">
-        <div class="container">
-            <h2 class="section-title">Pide Desde Tu <span>App Favorita</span></h2>
-            <p class="section-subtitle">¿No quieres salir de casa? Llevamos el mejor sabor directamente hasta tu puerta a través de las plataformas líderes.</p>
-            
-            <div class="apps-grid">
-                <a href="https://www.rappi.com.mx/restaurantes/1930000811-carnitas-los-michoacanos" target="_blank" rel="noopener noreferrer" class="app-card app-rappi">
-                    <i class="fas fa-motorcycle"></i>
-                    <h4>Rappi</h4>
-                    <span class="app-btn">Pedir Ahora</span>
-                </a>
+        <section id="pedir" class="delivery" aria-labelledby="delivery-title">
+            <div class="container">
+                <h2 class="section-title" id="delivery-title">Pide Desde Tu <span>App Favorita</span></h2>
+                <p class="section-subtitle">¿No quieres salir de casa? Llevamos el mejor sabor directamente hasta tu puerta a través de las plataformas líderes.</p>
                 
-                <a href="https://www.didi-food.com/es-MX/food/store/5764607528479228138/?location_country=MX&country=MX&lang=es-MX&channel=19&pid=website_seo%3Futm_source%3Dgoogle&af_adset_id=null&af_ad_id=null&af_c_id=null&af_channel=null&c=undefined&campaign=landingpage_%2Fmx%2Ffood%2Foaxaca-oax%2Fcarnitas-los-michoacanos%2F5764607528479228138%2F&utm_medium=organic&utm_source=null&utm_campaign=undefined&utm_term=null&source=null&campaign_id=null&ad_group_id=null&creative_id=null&target_id=null&keyword=null&matchtype=null&devicemodel=null&adposition=null&placement=null&clientType=19&is_from_marketing=1&af_web_dp=https%3A%2F%2Fweb.didiglobal.com%2Fmx%2Fstore&pl=eyJwb2lJZCI6IjExMTU1ODc1NzA1NTQ2MzQyNDAiLCJhZGRyZXNzQWxsRGlzcGxheSI6InNhbnRhIGx1Y8OtYSBkZWwgY2FtaW5vLCBPYXhhY2EsIE1leGljbyIsImNpdHkiOiJPYXhhY2EiLCJjaXR5SWQiOjUyMjAwMTAwLCJjb3VudHJ5Q29kZSI6Ik1YIiwiY291bnRyeUlkIjo1MiwibGF0IjoxNy4wNjQ5ODg0OTIwNTcsImxuZyI6LTk2LjcwNjczNzQxMDI3NywiZGlzcGxheU5hbWUiOiJwcml2YWRhIGJyw61naWRhIGdhcmPDrWEgMjA1IiwiYWRkcmVzcyI6InNhbnRhIGx1Y8OtYSBkZWwgY2FtaW5vLCBPYXhhY2EsIE1leGljbyIsImFkZHJlc3NBbGwiOiJwcml2YWRhIGJyw61naWRhIGdhcmPDrWEgMjA1LCBzYW50YSBsdWPDrWEgZGVsIGNhbWlubywgT2F4YWNhLCBNZXhpY28iLCJjb29yZGluYXRlVHlwZSI6Indnczg0IiwicG9pU3JjVGFnIjoibWFudWFsX3JnZW8iLCJzcmNUYWciOiJyZXZlcnNlZ2VvdG9wIiwic2VhcmNoSWQiOiIwYThmNzk3YzZhMjdhZmZlNTNiZjZmMzYwM2ExNzUwMiIsImRpc3RTdHIiOiIybSIsInBvaVR5cGUiOiJQb2ludCBBZGRyZXNzIiwiY291bnR5SWQiOjUyMjAwMTE2LCJjb3VudHlHcm91cElkIjo1MjIwMDEwMDAwMDF9" target="_blank" rel="noopener noreferrer" class="app-card app-didi">
-                    <i class="fas fa-hamburger"></i>
-                    <h4>DiDi Food</h4>
-                    <span class="app-btn">Pedir Ahora</span>
-                </a>
+                <div class="apps-grid">
+                    <a href="https://www.rappi.com.mx/restaurantes/1930000811-carnitas-los-michoacanos" target="_blank" rel="noopener noreferrer" class="app-card app-rappi" title="Pide comida a domicilio por Rappi">
+                        <i class="fas fa-motorcycle" aria-hidden="true"></i>
+                        <h4>Rappi</h4>
+                        <span class="app-btn">Pedir Ahora</span>
+                    </a>
+                    
+                    <a href="https://www.didi-food.com/es-MX/food/store/5764607528479228138/?location_country=MX&country=MX&lang=es-MX&channel=19&pid=website_seo%3Futm_source%3Dgoogle&af_adset_id=null&af_ad_id=null&af_c_id=null&af_channel=null&c=undefined&campaign=landingpage_%2Fmx%2Ffood%2Foaxaca-oax%2Fcarnitas-los-michoacanos%2F5764607528479228138%2F&utm_medium=organic&utm_source=null&utm_campaign=undefined&utm_term=null&source=null&campaign_id=null&ad_group_id=null&creative_id=null&target_id=null&keyword=null&matchtype=null&devicemodel=null&adposition=null&placement=null&clientType=19&is_from_marketing=1&af_web_dp=https%3A%2F%2Fweb.didiglobal.com%2Fmx%2Fstore&pl=eyJwb2lJZCI6IjExMTU1ODc1NzA1NTQ2MzQyNDAiLCJhZGRyZXNzQWxsRGlzcGxheSI6InNhbnRhIGx1Y8OtYSBkZWwgY2FtaW5vLCBPYXhhY2EsIE1leGljbyIsImNpdHkiOiJPYXhhY2EiLCJjaXR5SWQiOjUyMjAwMTAwLCJjb3VudHJ5Q29kZSI6Ik1YIiwiY291bnRyeUlkIjo1MiwibGF0IjoxNy4wNjQ5ODg0OTIwNTcsImxuZyI6LTk2LjcwNjczNzQxMDI3NywiZGlzcGxheU5hbWUiOiJwcml2YWRhIGJyw61naWRhIGdhcmPDrWEgMjA1IiwiYWRkcmVzcyI6InNhbnRhIGx1Y8OtYSBkZWwgY2FtaW5vLCBPYXhhY2EsIE1leGljbyIsImFkZHJlc3NBbGwiOiJwcml2YWRhIGJyw61naWRhIGdhcmPDrWEgMjA1LCBzYW50YSBsdWPDrWEgZGVsIGNhbWlubywgT2F4YWNhLCBNZXhpY28iLCJjb29yZGluYXRlVHlwZSI6Indnczg0IiwicG9pU3JjVGFnIjoibWFudWFsX3JnZW8iLCJzcmNUYWciOiJyZXZlcnNlZ2VvdG9wIiwic2VhcmNoSWQiOiIwYThmNzk3YzZhMjdhZmZlNTNiZjZmMzYwM2ExNzUwMiIsImRpc3RTdHIiOiIybSIsInBvaVR5cGUiOiJQb2ludCBBZGRyZXNzIiwiY291bnR5SWQiOjUyMjAwMTE2LCJjb3VudHlHcm91cElkIjo1MjIwMDEwMDAwMDF9" target="_blank" rel="noopener noreferrer" class="app-card app-didi" title="Pide comida a domicilio por DiDi Food">
+                        <i class="fas fa-hamburger" aria-hidden="true"></i>
+                        <h4>DiDi Food</h4>
+                        <span class="app-btn">Pedir Ahora</span>
+                    </a>
+                    
+                    <a href="https://www.ubereats.com/mx/store/carnitas-%E2%80%9Clos-michoacanos%E2%80%9D-reforma/qHK-KUhQQ1uxJn1xB-aUYw" target="_blank" rel="noopener noreferrer" class="app-card app-uber" title="Pide comida a domicilio por Uber Eats">
+                        <i class="fas fa-shopping-bag" aria-hidden="true"></i>
+                        <h4>Uber Eats</h4>
+                        <span class="app-btn">Pedir Ahora</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section id="sucursales" class="locations" aria-labelledby="locations-title">
+            <div class="container">
+                <h2 class="section-title" id="locations-title">Visita Nuestras Sucursales</h2>
+                <p class="section-subtitle">Contamos con dos cómodos establecimientos listos para darte la mejor atención con el sabor más vivo.</p>
                 
-                <a href="https://www.ubereats.com/mx/store/carnitas-%E2%80%9Clos-michoacanos%E2%80%9D-reforma/qHK-KUhQQ1uxJn1xB-aUYw" target="_blank" rel="noopener noreferrer" class="app-card app-uber">
-                    <i class="fas fa-shopping-bag"></i>
-                    <h4>Uber Eats</h4>
-                    <span class="app-btn">Pedir Ahora</span>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <section id="sucursales" class="locations">
-        <div class="container">
-            <h2 class="section-title">Visita Nuestras Sucursales</h2>
-            <p class="section-subtitle">Contamos con dos cómodos establecimientos listos para darte la mejor atención con el sabor más vivo.</p>
-            
-            <div class="locations-grid">
-                <div class="location-card">
-                    <div class="map-placeholder">
-                        <i class="fas fa-map-marked-alt"></i>
-                        <p>Sucursal Camino Nacional</p>
-                    </div>
-                    <div class="location-info">
-                        <div>
-                            <h3>Camino Nacional</h3>
-                            <ul class="location-details">
-                                <li><i class="fas fa-map-marker-alt"></i> Av. Camino Nacional #123, Centro</li>
-                                <li><i class="fas fa-clock"></i> Lun a Dom: 8:00 AM - 5:00 PM</li>
-                                <li><i class="fas fa-parking"></i> Estacionamiento disponible</li>
-                            </ul>
+                <div class="locations-grid">
+                    <article class="location-card">
+                        <div class="map-placeholder" aria-hidden="true">
+                            <i class="fas fa-map-marked-alt"></i>
+                            <p>Sucursal Camino Nacional</p>
                         </div>
-                        <a href="https://maps.app.goo.gl/mXjRLuPRe924MTmZA" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="width: 100%;">
-                            <i class="fas fa-directions"></i> Ver en Google Maps
-                        </a>
-                    </div>
-                </div>
-
-                <div class="location-card">
-                    <div class="map-placeholder">
-                        <i class="fas fa-map-marked-alt"></i>
-                        <p>Sucursal Colonia Reforma</p>
-                    </div>
-                    <div class="location-info">
-                        <div>
-                            <h3>Colonia Reforma</h3>
-                            <ul class="location-details">
-                                <li><i class="fas fa-map-marker-alt"></i> Calle de la República #456, Col. Reforma</li>
-                                <li><i class="fas fa-clock"></i> Lun a Dom: 8:00 AM - 6:00 PM</li>
-                                <li><i class="fas fa-wifi"></i> Zona Familiar con Wi-Fi</li>
-                            </ul>
+                        <div class="location-info">
+                            <div>
+                                <h3>Camino Nacional</h3>
+                                <ul class="location-details">
+                                    <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Av. Camino Nacional, cerca del Centro de Convenciones de Oax.</li>
+                                    <li><i class="fas fa-clock" aria-hidden="true"></i> Mar a Dom: 9:00 AM - 6:00 PM</li>
+                                    <li><i class="fas fa-parking" aria-hidden="true"></i> Estacionamiento disponible</li>
+                                </ul>
+                            </div>
+                            <a href="https://maps.app.goo.gl/mXjRLuPRe924MTmZA" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="width: 100%;" title="Ver Sucursal Camino Nacional en Google Maps">
+                                <i class="fas fa-directions" aria-hidden="true"></i> Ver en Google Maps
+                            </a>
                         </div>
-                        <a href="https://maps.app.goo.gl/g79eYJfWZgaCKzKi9" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="width: 100%;">
-                            <i class="fas fa-directions"></i> Ver en Google Maps
-                        </a>
-                    </div>
+                    </article>
+
+                    <article class="location-card">
+                        <div class="map-placeholder" aria-hidden="true">
+                            <i class="fas fa-map-marked-alt"></i>
+                            <p>Sucursal Colonia Reforma</p>
+                        </div>
+                        <div class="location-info">
+                            <div>
+                                <h3>Colonia Reforma</h3>
+                                <ul class="location-details">
+                                    <li><i class="fas fa-map-marker-alt" aria-hidden="true"></i> Calle Amapolas esquina Álamos #1000</li>
+                                    <li><i class="fas fa-clock" aria-hidden="true"></i> Mar a Dom: 9:30 AM - 6:00 PM</li>
+                                    <li><i class="fas fa-wifi" aria-hidden="true"></i> Zona Familiar con Wi-Fi</li>
+                                </ul>
+                            </div>
+                            <a href="https://maps.app.goo.gl/g79eYJfWZgaCKzKi9" target="_blank" rel="noopener noreferrer" class="btn btn-outline" style="width: 100%;" title="Ver Sucursal Colonia Reforma en Google Maps">
+                                <i class="fas fa-directions" aria-hidden="true"></i> Ver en Google Maps
+                            </a>
+                        </div>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer id="contacto">
         <div class="container footer-grid">
             <div class="footer-brand">
-                <img src="img/logo-grande.png" onerror="this.style.opacity='0.4';" alt="Carnitas Los Michoacanos" style="height: 55px; width: auto; margin-bottom: 15px; filter: brightness(0) invert(1);">
+                <img src="img/logo-grande.png" onerror="this.style.opacity='0.4';" alt="Logo Carnitas Los Michoacanos Blanco" style="height: 55px; width: auto; margin-bottom: 15px; filter: brightness(0) invert(1);">
                 <p>Llevamos la tradición y el auténtico sabor del cazo a tu mesa. Un concepto 100% familiar hecho con amor.</p>
                 <div class="social-links">
-                    <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon"><i class="fab fa-instagram"></i></a>
-                    <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" class="social-icon"><i class="fab fa-tiktok"></i></a>
+                    <a href="https://www.facebook.com/CarnitasLosMichoacanosOax" target="_blank" rel="noopener noreferrer" class="social-icon" title="Síguenos en Facebook" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon" title="Síguenos en Instagram" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                    <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" class="social-icon" title="Síguenos en TikTok" aria-label="TikTok"><i class="fab fa-tiktok" aria-hidden="true"></i></a>
                 </div>
             </div>
 
-            <div class="footer-links">
+            <nav class="footer-links" aria-label="Enlaces rápidos del pie de página">
                 <h4>Navegación</h4>
                 <ul class="footer-menu">
-                    <li><a href="#"><i class="fas fa-chevron-right"></i> Inicio</a></li>
-                    <li><a href="#menu-especialidades"><i class="fas fa-chevron-right"></i> Menú Completo</a></li>
-                    <li><a href="#pedir"><i class="fas fa-chevron-right"></i> Pide en Línea</a></li>
+                    <li><a href="#"><i class="fas fa-chevron-right" aria-hidden="true"></i> Inicio</a></li>
+                    <li><a href="#menu-especialidades"><i class="fas fa-chevron-right" aria-hidden="true"></i> Menú Completo</a></li>
+                    <li><a href="#pedir"><i class="fas fa-chevron-right" aria-hidden="true"></i> Pide en Línea</a></li>
                 </ul>
-            </div>
+            </nav>
 
-            <div class="footer-links">
-                <h4>Contacto y Pedidos</h4>
+            <address class="footer-links" style="font-style: normal;">
+                <h4>Contacto, Pedidos, Banquetes y Eventos</h4>
                 <ul class="footer-contact-list">
                     <li>
-                        <i class="fas fa-phone-alt"></i>
+                        <i class="fas fa-phone-alt" aria-hidden="true"></i>
                         <div>
                             <strong>Sucursal Camino Nacional:</strong><br>
-                            <a href="tel:+529511885103">+52 (951) 188-5103</a>
+                            <a href="tel:+529511885103" title="Llamar a Sucursal Camino Nacional">+52 (951) 188-5103</a>
                         </div>
                     </li>
                     <li>
-                        <i class="fas fa-phone-alt"></i>
+                        <i class="fas fa-phone-alt" aria-hidden="true"></i>
                         <div>
                             <strong>Sucursal Colonia Reforma:</strong><br>
-                            <a href="tel:+529517654321">+52 (951) 765-4321</a>
+                            <a href="tel:+529517654321" title="Llamar a Sucursal Colonia Reforma">+52 (951) 765-4321</a>
                         </div>
                     </li>
                     <li>
-                        <i class="fas fa-phone-alt"></i>
-                        <div>
-                            <strong>Pedidos Banquetes / Eventos:</strong><br>
-                            <a href="tel:+529519998888">+52 (951) 999-8888</a>
-                        </div>
+                        <i class="fas fa-phone-alt" aria-hidden="true"></i>
                     </li>
                     <li>
-                        <i class="fas fa-envelope"></i>
+                        <i class="fas fa-envelope" aria-hidden="true"></i>
                         <div>
                             <strong>Correo Electrónico:</strong><br>
-                            <a href="mailto:contacto@carnitaslosmichoacanos.com">contacto@carnitaslosmichoacanos.com</a>
+                            <a href="mailto:contacto@carnitaslosmichoacanos.com" title="Enviar correo a Carnitas Los Michoacanos">contacto@carnitaslosmichoacanos.com</a>
                         </div>
                     </li>
                 </ul>
-            </div>
+            </address>
         </div>
 
         <div class="footer-bottom">
